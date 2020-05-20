@@ -1,13 +1,15 @@
 import React from 'react';
+import styles from './Header.css';
 
 const Header = () => {
 
   return (
-    <header>
-      <section className="headerContainer">
+    <>
+      <header className={styles.Header}>
         <h1>Alcherithm</h1>
-      </section>
-    </header>
+        <nav></nav>
+      </header>
+    </>
   );
 };
 

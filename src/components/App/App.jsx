@@ -25,8 +25,10 @@ const Tester = ({ tests }) => {
   }, [tests]);
   return (
     <>
-      <div id="qunit"></div>
-      <div id="qunit-fixture"></div>
+      <section style={{ width: '50vw' }}>
+        <div id="qunit"></div>
+        <div id="qunit-fixture"></div>
+      </section>
     </>
   );
 };

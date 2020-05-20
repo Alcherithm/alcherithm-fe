@@ -10,32 +10,34 @@ const Test = () => {
     console.log(newValue);
   }
   return (
-    <AceEditor
-      placeholder="Placeholder Text"
-      mode="javascript"
-      theme="monokai"
-      name="root"
-      // onLoad={this.onLoad}
-      onChange={onChange}
-      fontSize={10}
-      showPrintMargin={true}
-      showGutter={true}
-      highlightActiveLine={true}
-      value={`test('It should add the number 8 to the array five times', assert => {
+    <section style={{ width: '50vw' }}>
+      <AceEditor
+        placeholder="Placeholder Text"
+        mode="javascript"
+        theme="monokai"
+        name="root"
+        // onLoad={this.onLoad}
+        onChange={onChange}
+        fontSize={10}
+        showPrintMargin={true}
+        showGutter={true}
+        highlightActiveLine={true}
+        value={`test('It should add the number 8 to the array five times', assert => {
         const array = [];
         const result = addNumbers(8, array, 5, addValues);
         assert.equal(array, result);
         assert.deepEqual(array, [8, 8, 8, 8, 8]);
     });
 `}
-      setOptions={{
-        enableBasicAutocompletion: true,
-        enableLiveAutocompletion: true,
-        enableSnippets: true,
-        showLineNumbers: true,
-        tabSize: 2,
-        maxLines: 15,
-      }}/>
+        setOptions={{
+          enableBasicAutocompletion: true,
+          enableLiveAutocompletion: true,
+          enableSnippets: true,
+          showLineNumbers: true,
+          tabSize: 2,
+          maxLines: 15,
+        }}/>
+    </section>
   );
 };
 
