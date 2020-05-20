@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import User from '../User/User';
 import Test from '../Test/Test';
+import Header from '../Header/Header.js';
 
 const Tester = ({ tests }) => {
   useEffect(() => {
@@ -33,6 +34,7 @@ export default function App() {
   const [code, setCode] = useState('function myFn() {}');
   return (
     <>
+      <Header />
       <textarea value={code} onChange={({ target }) => setCode(target.value)}></textarea>
       <User />
       <br></br>
