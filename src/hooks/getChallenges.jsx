@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useCurrentUser } from './AuthProvider';
 
+// cool!
 export const useGetChallenges = fetchFunction => {
   const [challenges, setChallenges] = useState([]);
   const [selectedChallenges, setSelectedChallenges] = useState([]);

@@ -8,6 +8,22 @@ import Mikey from '../../assets/profile/Mikey.png';
 import Will from '../../assets/profile/Will.jpg';
 import styles from './About.css';
 
+// create component for duplicate code
+const Developer = ({ name, img, bio, linkedIn, github}) => (
+  <div className={styles.dev}>
+    <img src={img} alt={`${name} Profile Picture`}/>
+    <div className={styles.links}>
+      <a href={github} target="_blank" rel="noopener noreferrer">
+        <img src={githubIcon} alt="github-icon" className={styles.icons}/>
+      </a>
+      <a href={linkedIn} target="_blank" rel="noopener noreferrer">
+        <img src={linkedInIcon} alt="linkedin-icon" className={styles.icons}></img>
+      </a>
+    </div>
+    <p>{bio}</p>
+  </div>
+)
+
 const About = () => (
   <>
     <main>
@@ -19,23 +35,18 @@ const About = () => (
           </a>
           <p className={styles.para}>Alcherithm - a code companion. Junior software developers often struggle with the learning process of code challenges. This learning platform combines resources, videos and documentation to help developers build a foundation. Users can not only practice from our library of code challenges, but they can also review past attempts at various problems. We invite you take the Alcherithm challenge; happy coding!
           </p>
-                  
-        </div>    
+
+        </div>
       </div>
 
       <div className={styles.devs}>
-        <div className={styles.dev}>
-          <img src={Dakota} alt="Dakota Profile Picture"/>
-          <div className={styles.links}>
-            <a href="https://github.com/dakotadruley" target="_blank" rel="noopener noreferrer">
-              <img src={githubIcon} alt="github-icon" className={styles.icons}/>
-            </a>
-            <a href="https://www.linkedin.com/in/dakota-druley/" target="_blank" rel="noopener noreferrer">
-              <img src={linkedInIcon} alt="linkedin-icon" className={styles.icons}></img>
-            </a>  
-          </div>
-          <p>DAKOTA DRULEY enjoys the full stack process and is passionate about problem solving, integrations, and efficient code. She is also a dancer, painter, social justice advocate and proud cat mom.</p>
-        </div>
+        <Developer
+          name="Dakota"
+          img={Dakota}
+          github="https://github.com/dakotadruley"
+          linkedIn="https://www.linkedin.com/in/dakota-druley/"
+          bio="DAKOTA DRULEY enjoys the full stack process and is passionate about problem solving, integrations, and efficient code. She is also a dancer, painter, social justice advocate and proud cat mom."
+        />
 
         <div className={styles.dev}>
           <img src={Dannie} alt="Dannie Profile Picture"/>
@@ -46,7 +57,7 @@ const About = () => (
             <a href="https://www.linkedin.com/in/dannieschumaker/" target="_blank" rel="noopener noreferrer">
               <img src={linkedInIcon} alt="linkedin-icon" className={styles.icons}></img>
             </a>
-          </div>  
+          </div>
           <p>DANNIE SCHUMAKER is a lifelong creator with a passion for the intersection of science and art. Whether knitting a sweater or building an app, her favorite part of the creative process is finding an elegant solution to a complex problem.</p>
         </div>
 
@@ -71,8 +82,8 @@ const About = () => (
             </a>
             <a href="https://www.linkedin.com/in/michaelromay/" target="_blank" rel="noopener noreferrer">
               <img src={linkedInIcon} alt="linkedin-icon" className={styles.icons}></img>
-            </a> 
-          </div>   
+            </a>
+          </div>
           <p>MICHAEL ROMAY is a fullstack engineer, installation artist and musician who makes weird digital visual and interactive art.  Code, music and art go hand in hand for him.  He also has a baby bird named Rico that is very sweet.</p>
         </div>
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-const ReactMarkdown = require('react-markdown');
+import ReactMarkdown from 'react-markdown';
 import CodeBlock from './CodeBlock';
 import styles from './ChallengeDisplay.css';
 import tabStyle from '../../styles/tabs.css';
