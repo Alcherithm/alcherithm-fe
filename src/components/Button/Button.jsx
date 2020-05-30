@@ -4,12 +4,15 @@ import styles from './buttons.css';
 import sizes from './sizes.css';
 import colors from '../../styles/colors.css';
 
-const Button = ({ 
-  onClick, 
-  buttonText, 
-  buttonStyle, 
-  buttonSize, 
-  backgroundColor }) => <button className={`${styles[buttonStyle]} ${sizes[buttonSize]} ${colors[backgroundColor]}`} onClick={onClick}>{buttonText}</button>;
+// use children for text so your button component behaves more like the button element
+// use rest to get other props like onClick
+const Button = ({
+  children,
+  buttonStyle,
+  buttonSize,
+  backgroundColor,
+  ...rest
+ }) => <button {...rest} className={`${styles[buttonStyle]} ${sizes[buttonSize]} ${colors[backgroundColor]}`} onClick={onClick}>{children}</button>;
 
 Button.propTypes = {
   buttonStyle: PropTypes.string,

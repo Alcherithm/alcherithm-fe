@@ -18,7 +18,9 @@ const History = () => {
   const codeElements = selectedChallenges.map((challenge) => (
     <li key={challenge._id}>
       <CodeChallenge {...challenge} char={300} />
-      <Button buttonStyle="primary" backgroundColor="green" buttonSize="medium" buttonText="Your Solutions" onClick={() => handleClick(challenge.solutions)} />
+      <Button buttonStyle="primary" backgroundColor="green" buttonSize="medium" onClick={() => handleClick(challenge.solutions)}>
+        Your Solutions
+      </Button>
     </li>
   ));
 
